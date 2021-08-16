@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg shadow navbar-light">
+    <div class="container">
+     <a class="navbar-brand" href="#">Eshop<span class="text-primary">.</span> </a>
+     <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav mx-auto">
+         <li class="nav-item active">
+           <a class="nav-link hvr-underline-from-center" routerLink="" >Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link hvr-underline-from-center" routerLink="shop" >Shop</a>
+         </li>
+         <li class="nav-item" mdbDropdown>
+           <a class="nav-link hvr-underline-from-center " mdbDropdownToggle>pages</a>
+           <div class="dropdown-menu">
+            <span class="dropdown-item" routerLink="pages/about">About</span>
+            <span class="dropdown-item" routerLink="pages/checkout">Checkout</span>
+            <span class="dropdown-item" routerLink="**">404</span>
+        </div>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link hvr-underline-from-center" routerLink="blog">Blog</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link hvr-underline-from-center" routerLink="contact" >Contact</a>
+           </li>
+       </ul>
+       <ul class="navbar-nav">
+         <li class="nav-link">
+          <mdb-icon fas icon="search" size="lg" class="pr-3" ></mdb-icon>
+         </li>
+         <li class="nav-link">
+          <mdb-icon far icon="heart" size="lg" class="pr-3" ></mdb-icon>
+         </li>
+         <li class="nav-link">
+          <mdb-icon routerLink="cart" fas icon="shopping-basket" size="lg" class="pr-3" ></mdb-icon>
+          <span class="one badge badge-info">{{shopCount}}</span>
+          
+         </li>
+       </ul>
+     </div>
+    </div>
+   </nav>
+   <!-- <li class="nav-link">
+    <a class="nav-item">  <span class="badge badge-primary">1</span></a>
+        <strong><small style="font-size: 11px;">$0.00</small></strong>
+     </li> -->

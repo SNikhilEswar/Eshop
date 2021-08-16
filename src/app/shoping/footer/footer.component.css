@@ -1,0 +1,63 @@
+footer li {
+    line-height: 2;
+    color: rgba(211, 211, 211, 0.794);
+    cursor: pointer;
+}
+
+footer p {
+    color: white;
+}
+
+footer p small {
+    color: rgba(211, 211, 211, 0.794);
+    font-size: 15px;
+}
+
+footer input {
+    height: 45px;
+    width: 70%;
+    padding: 0px 11px;
+    color: white;
+    background-color: #2f2e2e;
+    border: none;
+    outline: none;
+}
+
+footer .button {
+    height: 45px;
+width: 30%;
+color: white;
+background-color: orange;
+border: none;
+outline: none;
+  text-transform: uppercase;
+}
+
+footer .button:hover {
+    background-color: rgb(253, 181, 46);
+    color: white;
+    transition: 0.5s;
+}
+
+@media  (min-width: 1024px) and (max-width: 1366px) {
+
+    footer input {
+        width: 60%;
+    }
+    footer .button {
+        width: 40%;
+    }
+
+}
+
+
+@media  (min-width: 320px) and (max-width: 568px) {
+
+    footer input {
+        width: 60%;
+    }
+    footer .button {
+        width: 40%;
+    }
+
+}

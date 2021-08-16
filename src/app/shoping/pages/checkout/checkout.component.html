@@ -1,0 +1,203 @@
+<section class="py-5">
+    <div class="container py-5">
+<div class="color">
+    <hr>
+    <h5 class="text-center"><span><i class="fas fa-user-tag"></i></span> <small class="text-muted">&nbsp; Have a coupon?Click here to enter your code</small></h5>
+</div>
+    </div>
+</section>
+<section class="py-5">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 class="text-uppercase font-weight-bold">Billing deals</h3>
+            <hr>
+            <form [formGroup]="myReativeForms" (ngSubmit)="onSubmit()">
+                <div formGroupName="userDetaile">
+                        <div class="form-row">
+                        <div class="col-md-6">
+                            <div class=" form-group">
+                                <label for="F-name">First Name*</label>
+                                <input id="F-name" class="form-control" type="text" formControlName="firstName" >
+                                <small class="text-danger" *ngIf="!myReativeForms.get('userDetaile.firstName').valid && myReativeForms.get('userDetaile.firstName').touched">
+                                    <span *ngIf="myReativeForms.get('userDetaile.firstName').errors['required']">Name is not  valid</span>
+                                    <span *ngIf="myReativeForms.get('userDetaile.firstName').errors['nameNotAllowed']">this name is not allowed</span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" form-group">
+                                <label for="lastName">Last Name*</label>
+                                <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                                <small class="text-danger" *ngIf="!myReativeForms.get('userDetaile.lastName').valid && myReativeForms.get('userDetaile.lastName').touched">
+                                    please fill the form
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Country*</h6>
+                            <div class=" form-group">
+                                <input type="text" placeholder="Country"  id="country" class="form-control"  formControlName="country">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Address*</h6>
+                            <div class="form-group">
+                                <input type="text" placeholder="Street Address" id="street" class="form-control" formControlName="streetAddress" >
+                              
+                            </div>
+                            <div class="form-group " formArrayName="apartment">
+                                <ng-container *ngFor="let apart of myReativeForms.get('apartment')['controls']; index as i">
+                                    <input type="text"  placeholder="Apartment,suit,unite ect (optional)" class="form-control mt-2" formControlName="{{i}}">
+                                </ng-container>
+                                <button type="button" class="btn btn-outline btn-sm" (click)="onAdd()">add more</button>
+                            </div>
+
+
+                            <div class=" form-group">
+                                
+                                <input type="text" id="state" placeholder="Country/State" class="form-control" formControlName="state" >
+                                 
+                            </div>
+                            <div class=" form-group">
+                                <input type="text" id="pin" placeholder="Postcode/Zip" class="form-control" formControlName="postCode" >
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class=" form-group">
+                                <label for="tel">Phone*</label>
+                                <input type="number" id="phone" class="form-control" formControlName="phone">
+                                <small class="text-danger" *ngIf="!myReativeForms.get('phone').valid && myReativeForms.get('phone').touched ">
+                                    number must me at lest 10
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" form-group">
+                                <label for="email">Email*</label>
+                                <input type="text" id="email" class="form-control" formControlName="email">
+                                <small class="text-danger" *ngIf="!myReativeForms.get('email').valid && myReativeForms.get('email').touched ">
+                                    email is not valid
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+               <div class="row">
+                <div class="col-md-12">
+                    <mdb-checkbox [default]="false"> Create an account?</mdb-checkbox>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo deserunt modi hic 
+                        officiis doloribus commodi!</p>
+                </div>
+               </div>
+          <div class="row">
+            <div class="col-md-12">
+                <h6>Account Password</h6>
+                <div class=" form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control"  formControlName="password">
+                    <small class="text-danger" *ngIf="!myReativeForms.get('password').valid && myReativeForms.get('password').touched ">
+                        
+                        <span *ngIf="myReativeForms.get('password').errors.required">password is not valid</span>
+                        <span *ngIf="myReativeForms.get('password').errors.minlength">password must me 10 </span>
+                        
+                    </small>
+                </div>
+                <mdb-checkbox [default]="false"> Note about your order,e.g,special note for delivery</mdb-checkbox>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <h6 class="mt-4">Order notes</h6>
+                <div class=" form-group">
+                    <label for="subject">Note about your order,eg,special note for delivery</label>
+                    <input type="text" id="subject" class="form-control" >
+                </div>
+            </div>
+           </div>
+           <button class="btn btn-success"  [disabled]="!myReativeForms.valid || myReativeForms.untouched" type="submit" >next</button>
+            </form>
+        </div>
+        <div class="col-lg-4">
+            <div class="card bg-light">
+            <div class="py-3">
+                <h4 class="ml-4"><small class="text-uppercase display-5">your order</small>
+                </h4>
+                <hr>
+            </div>
+     <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th class="float-right">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01. Chain buck bag</td>
+                    <td class="float-right">$ 300.0</td>
+                </tr>
+                <tr>
+                    <td>02. Zip-pockets pebbled
+                        <br> total briefcase</td>
+                    <td class="float-right">$ 170.0</td>
+                </tr>
+                <tr>
+                    <td>03. Black jean</td>
+                    <td class="float-right">$ 170.0</td>
+                </tr>
+                <tr>
+                    <td>04. Cotton shirt</td>
+                    <td class="float-right">$ 110.0</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <hr style="background-color: rgb(184, 184, 184);">
+    </div>
+    <div class="container">
+  <table class="table">
+      <thead>
+        <tr>
+            <th>Subtotal</th>
+            <td class="float-right"><strong class="text-danger font-weight-bold">$ 750.0</strong></td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td class="float-right"><strong class="text-danger font-weight-bold">$ 750.0</strong></td>
+        </tr>
+      </thead>
+  </table>
+  <hr style="background-color: rgb(184, 184, 184);">
+    </div>
+ <div class="container ml-4">
+    <mdb-checkbox [default]="false">&nbsp;Create an account?</mdb-checkbox>
+ </div>
+ <div class="container mx-auto">
+    <p class="text-muted ml-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Excepturi tenetur culpa molestias labore debitis</p>
+        <div class="ml-4">
+            <mdb-checkbox [default]="false">&nbsp;Cheque payment</mdb-checkbox>
+            <mdb-checkbox [default]="false">&nbsp;payPal</mdb-checkbox>
+        </div>
+ </div>
+ <button mdbBtn color="danger" class="disabled waves-light waves-effect" mdbWavesEffect>Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

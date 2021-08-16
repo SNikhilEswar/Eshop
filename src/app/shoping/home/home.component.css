@@ -1,0 +1,443 @@
+
+@media  (min-width: 1199px) {
+    .d-block {
+        height: 100vh;
+    }
+}
+.carousel-caption {
+position: absolute;
+top: 45%;
+left: -30%;
+transform: translateY(-50%);
+color: black
+}
+ h3 {
+     font-size: 4.4rem;
+    margin-right: 10%;
+ }
+
+ h6{
+     font-size: 4rem;
+ }
+
+ .s {
+    font-size: 1.6rem;
+    margin-right: 15%;
+}
+
+.btn1 {
+    margin-right: 14%;
+    margin-top: 1%;
+    width: 160px;
+    height: 55px;
+}
+/* blog */
+
+mdb-icon {
+    font-size: 2.5rem;
+}
+
+.blog .width {
+    border-bottom: 3px solid orange;
+}
+
+
+mdb-icon {
+    font-size: 2.5rem;
+}
+
+.blog .width {
+    border-bottom: 3px solid orange;
+}
+
+.brands .fab {
+    font-size: 44px;
+    color: rgba(204, 204, 204, 0.726);
+}
+
+.brands p {
+    font-size: 30px;
+  color:  rgba(204, 204, 204, 0.726);
+}
+
+.brands .d-flex {
+    margin: 0px -200px;
+   
+}
+.brands {
+    background-color: rgb(56, 55, 55);
+    padding: 10px 0px;
+}
+
+
+.products {
+    background-color: #eee;
+}
+
+.category {
+    background-color: lavender;
+}
+
+.groups {
+    background-color: azure;
+}
+.blog {
+    background-color: whitesmoke;
+}
+
+/* parallex */
+
+.parallex {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url('https://source.unsplash.com/1600x900/?fashion,women') no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 70vh;
+    color: white;
+}
+
+.parallex h1 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.parallex p {
+    font-size: 22px;
+}
+
+.parallex .btn7 {
+    height: 40px;
+    width: 110px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    overflow: none;
+    border-radius: 4px;
+}
+.parallex .btn7:hover {
+    background-color: white;
+    color: yellowgreen;
+    transition: 0.5s;
+    border: none;
+}
+
+
+
+.parallex .btn6 {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: yellowgreen;
+    border-radius: 4px;
+}
+
+.parallex .btn6:hover {
+    background-color: rgb(47, 42, 42);
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.products.img-fluid {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+
+/* medai */
+@media  (min-width: 375px) and (max-width: 667px) {
+    .carousel-caption {
+        color: white;
+        }
+         h3 {
+             font-size: 2rem;
+            margin-left: 20%;
+         }
+        
+         h6{
+             font-size: 2rem;
+             margin-left: 30%;
+         }
+        
+         .s {
+            font-size: 1rem;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+        
+        .btn1 {
+            display: none;
+        }
+
+
+        .category mdb-card {
+            margin-top: 10px;
+        }
+
+
+        
+.parallex h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.parallex p {
+    font-size: 15px;
+}
+
+.parallex .btn7 {
+    height: 40px;
+    width: 110px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    overflow: none;
+    border-radius: 4px;
+}
+.parallex .btn7:hover {
+    background-color: white;
+    color: yellowgreen;
+    transition: 0.5s;
+    border: none;
+}
+
+
+
+.parallex .btn6 {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: yellowgreen;
+    border-radius: 4px;
+}
+
+.parallex .btn6:hover {
+    background-color: rgb(47, 42, 42);
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+}
+
+
+
+
+/* medai */
+@media  (min-width: 360px) and (max-width: 640px) {
+    .carousel-caption {
+        color: white;
+        }
+         h3 {
+             font-size: 2rem;
+            margin-left: 20%;
+         }
+        
+         h6{
+             font-size: 2rem;
+             margin-left: 30%;
+         }
+        
+         .s {
+            font-size: 1rem;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+        
+        .btn1 {
+            display: none;
+        }
+
+
+        .category mdb-card {
+            margin-top: 10px;
+        }
+
+
+        
+.parallex h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.parallex p {
+    font-size: 15px;
+}
+
+.parallex .btn7 {
+    height: 40px;
+    width: 110px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    overflow: none;
+    border-radius: 4px;
+}
+.parallex .btn7:hover {
+    background-color: white;
+    color: yellowgreen;
+    transition: 0.5s;
+    border: none;
+}
+
+
+
+.parallex .btn6 {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: yellowgreen;
+    border-radius: 4px;
+}
+
+.parallex .btn6:hover {
+    background-color: rgb(47, 42, 42);
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+}
+
+
+@media  (min-width: 320px) and (max-width: 568px) {
+    .carousel-caption {
+        color: white;
+        margin-bottom: -22%;
+        margin-left: 10%;
+        }
+         h3 {
+             font-size: 2rem;
+            margin-left: 20%;
+         }
+        
+         h6{
+             font-size: 2rem;
+             margin-left: 30%;
+         }
+        
+         .s {
+            font-size: 1rem;
+            margin-left: 20%;
+        }
+        
+        .btn1 {
+            display: none;
+        }
+
+
+        .category mdb-card {
+            margin-top: 10px;
+        }
+
+
+        
+.parallex h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.parallex p {
+    font-size: 15px;
+}
+
+.parallex .btn7 {
+    height: 40px;
+    width: 110px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    overflow: none;
+    border-radius: 4px;
+}
+.parallex .btn7:hover {
+    background-color: white;
+    color: yellowgreen;
+    transition: 0.5s;
+    border: none;
+}
+
+
+
+.parallex .btn6 {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: yellowgreen;
+    border-radius: 4px;
+}
+
+.parallex .btn6:hover {
+    background-color: rgb(47, 42, 42);
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+}
+
+
+
+@media  (min-width: 768px) and (max-width: 1024px){
+    .carousel-caption {
+        color: white;
+        margin-right: 8%;
+        }
+         h3 {
+             font-size: 4rem;
+            margin-left: 15%;
+         }
+        
+         h6{
+             font-size: 4rem;
+             margin-left: 30%;
+         }
+        
+         .s {
+            font-size: 2rem;
+            margin-left: 15%;
+        }
+        
+        .btn1 {
+            margin-left: 10%;
+        }
+}
+
+@media  (min-width: 1024px) and (max-width: 1366px) {
+    h6{
+        font-size: 4rem;
+        margin-left: 23%;
+    }
+
+    .parallex .container {
+     margin-top: 100px;
+    }
+
+
+    .parallex h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    
+    .parallex p {
+        font-size: 2rem;
+    }
+
+
+    .parallex {
+        height: 50vh;
+    }
+
+
+}

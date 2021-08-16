@@ -1,0 +1,53 @@
+.about {
+    background-color: rgb(232, 240, 247);
+}
+
+.about h4 {
+    font-size: 29px;
+    font-family: sans-serif;
+}
+.about p {
+    font-family: 'FontAwesome';
+    font-size: 17px;
+}
+.about .lead {
+    font-size: 22px;
+}
+.about .fa {
+font-size: 250px;
+color: rgb(255, 166, 0);
+margin-left: 25px;
+}
+
+.about .btn {
+    color: black;
+}
+
+.values {
+    background-color: rgb(223, 222, 222);
+}
+
+.values .fa {
+    font-size: 250px;
+    color: rgb(255, 166, 0);
+    margin-left: 10px;
+    }
+
+
+    .values h4 {
+        font-size: 29px;
+        font-family: sans-serif;
+    }
+    .values p {
+        font-family: 'FontAwesome';
+        font-size: 17px;
+    }
+
+    .services .icon .fa {
+        font-size: 55px;
+        color: orange;
+    }
+
+    .services .icon {
+        margin-top: 50px;
+    }

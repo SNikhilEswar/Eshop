@@ -1,0 +1,82 @@
+<section class="parallex">
+<h1 class="font-weight-bold Display-2">Contact Us</h1>
+</section>
+<section class="contact py-5">
+<div class="container py-5">
+<div class="row">
+    <div class="col-lg-7">
+        <h3>Get in Touch</h3>
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <div class="form-row">
+                <div class="col-lg-12">
+                    <div class="md-form">
+                        <textarea mdbValidate type="text" id="form7" class="md-textarea md-textarea-auto form-control" mdbInput  rows="3" name="textarea" required ngModel #textarea="ngModel" minlength="20"></textarea>
+                        <label for="form7">Enter Message</label>
+
+    <mdb-error *ngIf="textarea.invalid && (textarea.dirty || textarea.touched)">Please fill at least 20 words</mdb-error>
+    <mdb-success *ngIf="textarea.valid && (textarea.dirty || textarea.touched)">filled success</mdb-success>
+
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+             <div class="md-form">
+                <input mdbValidate  type="text" id="userName"  class="form-control" name="input" required ngModel #input="ngModel" mdbInput>
+                <label for="userName">Enter your name</label>
+                <mdb-error *ngIf="input.invalid && (input.dirty || input.touched)">Please fill the gaps</mdb-error>
+                <mdb-success *ngIf="input.valid && (input.dirty || input.touched)">filled success</mdb-success>
+             </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="md-form">
+                        <input mdbValidate  type="email" id="email"  class="form-control" name="email" email required ngModel #email="ngModel" mdbInput>
+                        <label for="email">Enter your email</label>
+                        <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)">Please write valid e-mail</mdb-error>
+                        <mdb-success *ngIf="email.valid && (email.dirty || email.touched)">filled success</mdb-success>
+                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="md-form">
+                    <input type="text" mdbValidate id="subject" class="form-control" name="subject" required ngModel #subject="ngModel"   mdbInput>
+                    <label for="subject">Enter Subject</label>
+                    <mdb-error *ngIf="subject.invalid && (subject.dirty || subject.touched)">Please give us information</mdb-error>
+                    <mdb-success *ngIf="subject.valid && (subject.dirty || subject.touched)">Thanx for reply</mdb-success>
+                </div>
+                </div>
+            </div>
+            <button [disabled]="!myForm.valid || myForm.untouched" class="btn btn-outline-purple" mdbBtn mdbWavesEffect>send</button>
+        </form>
+    </div>
+    <div class="col-lg-4">
+    <div class="row">
+        <div class="col-lg-2 py-3">
+            <mdb-icon fas icon="home"></mdb-icon>
+        </div>
+        <div class="col-lg-9 py-3">
+            <h5>Button, California</h5>
+            <p class="text-muted">Rosemead, CA91770</p>
+        </div>
+        <div class="col-lg-2 py-3">
+            <mdb-icon fas icon="tablet-alt"></mdb-icon>
+        </div>
+        <div class="col-lg-9 py-3">
+            <h5>+1 253 565 2365</h5>
+            <p class="text-muted">Mon to Fri 9am to 6pm</p>
+        </div>
+        <div class="col-lg-2 py-3">
+            <mdb-icon far icon="envelope"></mdb-icon>
+        </div>
+        <div class="col-lg-9 py-3">
+            <h5>support@example.com</h5>
+            <p class="text-muted">send us your query anytime!</p>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</section>
+
+

@@ -1,0 +1,329 @@
+<section class=" detailes py-5">
+    <h2 class="text-center h2-responsive">Product Page</h2>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="view overlay">
+                    <img src="{{seletedItems.image}}" class="img-fluid z-depth-1" alt="">
+                    <div class=" mask rgba-white-slight"></div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6 col-12 py-3">
+                <h5 class="mb-2">New Fashion</h5>
+                <p class="mb-2 text-muted text-uppercase small">{{seletedItems.title}}</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                    <li class="ml-2"><i class="fas fa-star fa-sm text-primary"></i></li>
+                    <li class="ml-2"><i class="fas fa-star fa-sm text-primary"></i></li>
+                    <li class="ml-2"><i class="fas fa-star fa-sm text-primary"></i></li>
+                    <li class="ml-2"><i class="fas fa-star-half fa-sm text-primary"></i></li>
+                </ul>
+                <p><span class="mr-1"><strong>${{seletedItems.price}}</strong></span></p>
+                <p class="pt-1 grey-text" size="lg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
+        error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
+        officia quis dolore quos sapiente tempore alias.
+                </p>
+             <div class="table-responsive">
+                <table class="table table-sm table-borderless  mb-0">
+                    <tbody>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row">Model</th>
+                            <td class="text-muted">New Deminem 5407x</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row">Color</th>
+                            <td class="text-muted">Red</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row">Delivery</th>
+                            <td class="text-muted">All Areas</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <div class="table-responsive mb-2">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="pl-1 pb-0 w-25">Quantity</td>
+                                <td class="pb-0">Select size</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-0">
+                                    <div class="btn-group mr-5 mt-2">
+                                        <a type="button" class="btn btn-sm btn-light" (click)="Inc(seletedItems)"><i class="fas fa-plus"></i></a>
+                                        <a type="button" class="btn btn-sm btn-light disabled">{{seletedItems.qnt}}</a>
+                                        <a type="button" class="btn btn-sm btn-light" (click)="Dec(seletedItems)"><i class="fas fa-minus"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-3">
+                                        <div class="form-check form-check-inline pl-0">
+                                          <input type="radio" class="form-check-input" id="small" name="materialExampleRadios"
+                                            checked mdbInput>
+                                          <label class="form-check-label small text-uppercase card-link-secondary"
+                                            for="small">Small</label>
+                                        </div>
+                                        <div class="form-check form-check-inline pl-0">
+                                            <input type="radio" class="form-check-input" name="materialExampleRadios" id="medium">
+                                            <label class="form-check-label small text-uppercase card-link-secondary" for="medium"> Medium</label>
+                                        </div>
+                                        <div class="form-check form-check-inline pl-0">
+                                            <input type="radio" class="form-check-input" name="materialExampleRadios" id="large">
+                                            <label class="form-check-label small text-uppercase card-link-secondary" for="large"> Large</label>
+                                        </div>
+                                        </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button mdbBtn color="primary" size="md" mdbWavesEffect (click)="AddtoCart2(seletedItems)" mdbBtn data-toggle="modal" data-target="#exampleModal">Buy Now</button>
+            <button mdbBtn color="white"  size="md" (click)="AddtoCart(seletedItems)"><i
+                class="fas fa-shopping-cart pr-2" mdbWavesEffect></i>
+                Add to cart</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--Section: Block Content-->
+<section class="text-center py-5">
+    <h1 class="text-info">Related Products</h1>
+<div class="container py-5">
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-3 mb-5">
+  
+        <!-- Card -->
+        <div class="">
+  
+          <div class="view zoom overlay z-depth-2 rounded">
+            <img class="img-fluid w-100"
+              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+            <a (click)="toShop()">
+              <div class="mask">
+                <img class="img-fluid w-100"
+                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg">
+                <div class="mask rgba-black-slight"></div>
+              </div>
+            </a>
+          </div>
+  
+          <div class="pt-4">
+  
+            <h5>Fantasy T-shirt</h5>
+            <h6>12.99 $</h6>
+          </div>
+  
+        </div>
+        <!-- Card -->
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-3 mb-5">
+  
+        <!-- Card -->
+        <div class="">
+  
+          <div class="view zoom overlay z-depth-2 rounded">
+            <img class="img-fluid w-100"
+              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg" alt="Sample">
+            <a (click)="toShop()">
+              <div class="mask">
+                <img class="img-fluid w-100"
+                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg">
+                <div class="mask rgba-black-slight"></div>
+              </div>
+            </a>
+          </div>
+  
+          <div class="pt-4">
+  
+            <h5>Fantasy T-shirt</h5>
+            <h6>12.99 $</h6>
+  
+          </div>
+  
+        </div>
+        <!-- Card -->
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-3 mb-5">
+  
+        <!-- Card -->
+        <div class="">
+  
+          <div class="view zoom overlay z-depth-2 rounded">
+            <img class="img-fluid w-100"
+              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg" alt="Sample">
+            <a (click)="toShop()">
+              <div class="mask">
+                <img class="img-fluid w-100"
+                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg">
+                <div class="mask rgba-black-slight"></div>
+              </div>
+            </a>
+          </div>
+  
+          <div class="pt-4">
+  
+            <h5>Fantasy T-shirt</h5>
+            <h6>
+              <span class="text-danger mr-1">$12.99</span>
+              <span class="text-grey"><s>$36.99</s></span>
+            </h6>
+  
+          </div>
+  
+        </div>
+        <!-- Card -->
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-3 mb-5">
+  
+        <!-- Card -->
+        <div class="">
+  
+          <div class="view zoom overlay z-depth-2 rounded">
+            <img class="img-fluid w-100"
+              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg" alt="Sample">
+            <a (click)="toShop()">
+              <div class="mask">
+                <img class="img-fluid w-100"
+                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg">
+                <div class="mask rgba-black-slight"></div>
+              </div>
+            </a>
+          </div>
+  
+          <div class="pt-4">
+  
+            <h5>Fantasy T-shirt</h5>
+            <h6>
+              <span class="text-danger mr-1">$12.99</span>
+              <span class="text-grey"><s>$36.99</s></span>
+            </h6>
+  
+          </div>
+  
+        </div>
+        <!-- Card -->
+  
+      </div>
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+</div>
+  </section>
+  <!--Section: Block Content-->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="documnt">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title ml-auto" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="exampleModalLongTitle">Please fill the spaces</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container py-3">
+                <form  #myForm="ngForm">
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">E-MAIL:</label>
+                      <input type="text" class="form-control form-control-lg" id="recipient-name" placeholder="Bootstrap@example.com" name="email" required ngModel #email="ngModel" email>
+                      <small class="text-danger" *ngIf="!email.valid && email.touched">please fill the form</small>
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-form-label">Password:</label>
+                        <input  type="password" class="form-control form-control-lg" placeholder="*******" minlength="8" name="password" required ngModel #password="ngModel">
+                        <small class="text-danger" *ngIf="!password.valid && password.touched">please write your password</small>
+                    </div>
+                    <button (click)="onSubmit()" [disabled]="!myForm.valid || myForm.untouched" type="button" mdbBtn class="btn btn-secondary btn-lg btn-block" data-dismiss="modal">LOGIN</button>
+                </form>
+    
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button mdbBtn class="btn btn-danger btn-lg" type="button" data-toggle="modal"  data-dismiss="modal" data-target="#exampleModal2">SIGN UP</button>
+        </div>
+    </div>
+    </div>
+    </div>
+   <!-- modal 2  -->
+    
+    
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="documnt">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ml-auto" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="exampleModal2LongTitle">Please fill the spaces</h5>
+                <button mdbBtn type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container py-3">
+                    <form #myForm2="ngForm">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="F-name" class="col-form-label">FIRST NAME</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="JOHN" id="F-name"
+                                    name="firstname" ngModel required #firstname="ngModel" minlength="5">
+                                    <small class="text-danger" *ngIf="!firstname.valid && firstname.touched">F-name required</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="L-name" class="col-form-label">LAST NAME</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="DEO" id="L-name"
+                                    name="lastname" required ngModel #lastname="ngModel" minlength="5">
+                                    <small class="text-danger" *ngIf="!lastname.valid && lastname.touched">L-name is required</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="email" class="col-form-label">E-MAIL:</label>
+                          <input type="text" class="form-control form-control-lg" placeholder="Bootstrap123@examlpe.com" id="email"
+                          name="email2" required ngModel #email2="ngModel" email>
+                          <small class="text-danger" *ngIf="!email2.valid && email2.touched">e-mail field is required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label">Phone:</label>
+                            <input type="number" class="form-control form-control-lg" placeholder="+911225551" id="phone"
+                            name="phone" required ngModel #phone="ngModel" minlength="10" pattern="^\d{10}$">
+                            <small class="text-danger" *ngIf="!phone.valid && phone.touched">mobile number required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="9438722192" id="password"
+                            name="password2" required ngModel #password2="ngModel" minlength="12">
+                            <small class="text-danger" *ngIf="!password2.valid && password2.touched">password is required</small>
+                        </div>
+                        <button (click)="onSubmit2()"  mdbBtn type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"  data-dismiss="modal" data-target="#exampleModal">LOGIN</button>
+                        <!-- <button (click)="onSubmit2()" [disabled]="!myForm2.valid || myForm2.untouched" mdbBtn type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">LOGIN</button> -->
+                    </form>
+        
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>

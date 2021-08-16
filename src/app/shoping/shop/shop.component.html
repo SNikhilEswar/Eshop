@@ -1,0 +1,30 @@
+<section class="py-5">
+    <div class="container py-5">
+     <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 animated fadeInUp slow" *ngFor="let pro of productList">
+            <mdb-card class="align-items-center">
+                <div class="view overlay waves-light" mdbWavesEffect>
+                    <mdb-card-img src="{{pro.image}}"  class="img-fluid"></mdb-card-img>
+                    <a routerLink="{{pro.id}}">
+                        <div class="mask rgba-white-slight">
+                        </div>
+                    </a>
+                </div>
+                <mdb-card-body class="text-center">
+                    <h4><small>{{pro.id}}. </small><strong class="text-light"> {{pro.category}}</strong></h4>
+                    <p class="card-subtitle"><small>{{pro.title}}</small></p>
+                    <h4 class="font-weight-bold blue-text">
+                        <strong>${{pro.price}}</strong>
+                    </h4>
+                    <div class="btn-group">
+                        <a type="button" class=" btn btn-sm badge badge-warning" size="sm" (click)="Inc(pro)"><mdb-icon fas icon="plus"></mdb-icon></a>
+                        <a class=" btn btn-sm badge badge-secondary disabled" size="sm">{{pro.qnt}}</a>
+                        <a type="button" class=" btn btn-sm badge badge-info" size="sm" (click)="Dec(pro)"><mdb-icon fas icon="minus"></mdb-icon></a>
+                    </div>
+                    <button mdbBtn  color="orange" size="sm" class="waves-light" mdbWavesEffect (click)="AddtoCart(pro)">Add to cart</button>
+                </mdb-card-body>
+          </mdb-card>
+        </div>
+     </div>
+    </div>
+</section>

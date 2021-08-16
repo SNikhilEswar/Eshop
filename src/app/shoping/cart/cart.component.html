@@ -1,0 +1,52 @@
+<section class="py-5 mt-4">
+    <div class="container py-5">
+        <h1 class="text-center">Cart</h1>
+        <table class="table table-striped" *ngIf="storeData">
+            <thead>
+                <tr>
+                    <th>image</th>
+                    <th>price</th>
+                    <th>quantity</th>
+                    <th>sub Total</th>
+                    <th>removeItem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of storeData">
+                    <td>
+                        <img src="{{data.image}}" class="img-fluid" width="100" alt="">
+                    </td>
+                    <td>
+                        <span><small>$</small> {{data.price}}</span>
+                    </td>
+                    <td>
+                            <a type="button" class=" btn btn-sm badge badge-warning" size="sm" (click)="inc(data.prodid, data.qnt)"><mdb-icon fas icon="plus"></mdb-icon></a>
+                            <a class=" btn btn-sm badge badge-secondary disabled" size="sm">{{data.qnt}}</a>
+                            <a type="button" class=" btn btn-sm badge badge-info" size="sm" (click)="dec(data.proid, data.qnt)"><mdb-icon fas icon="minus"></mdb-icon></a>
+                    </td>
+                    <td>
+                        <span><small>$</small> {{data.qnt * data.price | number}}</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning"(click)="singleDelete(data.proid)"><mdb-icon fas icon="trash-alt"></mdb-icon></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Total- <strong class="text-success">${{total}}</strong></h1>
+            </div>
+                <div class="col-lg-6 text-right">
+                    <button mdbBtn color="danger" mdbWavesEffect (click)="onDelete()">
+                        <mdb-icon fas icon="trash"></mdb-icon>
+                        Remove All
+                    </button>
+            </div>
+        </div>
+    </div> 
+
+</section>
+
+
+
